@@ -1,9 +1,9 @@
 #Calculator App
 def divide(num1,num2):
-    if (num2 == 0):
-        print("Cannot Divide By 0")
-        return 0
-    print(f"{num1} divided by {num2} is:{num1/num2:.2f}")
+    try:
+        print(f"{num1} divided by {num2} is:{num1/num2:.2f}")
+    except ZeroDivisionError:
+        print("Cannot divide by Zero")
 def user_input():
     validInput = True
     while(validInput):
